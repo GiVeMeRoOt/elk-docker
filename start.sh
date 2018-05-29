@@ -157,7 +157,7 @@ else
         > /etc/init.d/logstash.new && mv /etc/init.d/logstash.new /etc/init.d/logstash && chmod +x /etc/init.d/logstash
   fi
 
-  service logstash start
+  /opt/logstash/bin/logstash -f /etc/logstash/conf.d/03-httpd.conf
   OUTPUT_LOGFILES+="/var/log/logstash/logstash-plain.log "
 fi
 
